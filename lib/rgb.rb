@@ -4,6 +4,13 @@ def to_hex(r=0, g=0, b=0)
   end
 end
 
-def to_ints(r=0, g=0, b=0)
-  [0,0,0]
+def to_ints(hex)
+  r = hex[1..2]
+  g = hex[3..4]
+  b = hex[5..6]
+  ints = []
+  [r,g,b].each do |s|
+    ints << s.hex
+  end
+  ints
 end
