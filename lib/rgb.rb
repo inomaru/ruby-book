@@ -6,5 +6,4 @@ end
 
 def to_ints(hex)
   hex.scan(/\w\w/).map(&:hex)
-  end
 end
