@@ -4,9 +4,9 @@ FROM ruby:3.1.2
 RUN apt-get update -qq && apt-get install -y vim
 
 # アプリケーションディレクトリを作成
-RUN mkdir sample
+RUN mkdir work
 
 # アプリケーションディレクトリを作業用ディレクトリに設定
-WORKDIR /sample
+WORKDIR /work
 ADD . .
 EXPOSE 3000
